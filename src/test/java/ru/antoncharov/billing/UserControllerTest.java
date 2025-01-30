@@ -38,8 +38,6 @@ public class UserControllerTest extends BillingApplicationTest{
     void addPhoneToUserTest() throws Exception {
         SearchUserRequest searchUserRequest = new SearchUserRequest();
         searchUserRequest.setName("user");
-        searchUserRequest.setPage(0);
-        searchUserRequest.setPageSize(5);
         mockMvc.perform(post("/api/user/search")
                 .content(objectMapper.writeValueAsString(searchUserRequest))
                 .contentType(MediaType.APPLICATION_JSON))
